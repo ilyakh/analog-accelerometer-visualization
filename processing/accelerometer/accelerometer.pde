@@ -34,17 +34,15 @@ boolean requested = false;
 void draw() {
   
   if ( messageBuffer != "" ) {
-    
     try {
-      
       pcx = cx;
       pcy = cy;
       pcz = cz;
       
       JSON responseObject = JSON.parse( messageBuffer );
-      cx = ( responseObject.getInt( "x" ) );
-      cy = ( responseObject.getInt( "y" ) );
-      cz = ( responseObject.getInt( "z" ) );
+       cx = ( responseObject.getInt( "x" ) );
+       cy = ( responseObject.getInt( "y" ) );
+       cz = ( responseObject.getInt( "z" ) );
       
       dcx = pcx - cx;
       dcy = pcy - cy;
